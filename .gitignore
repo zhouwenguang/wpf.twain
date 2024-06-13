@@ -1,0 +1,18 @@
+﻿################################################################################
+# 此 .gitignore 文件已由 Microsoft(R) Visual Studio 自动创建。
+################################################################################
+
+/wpf.twain.demo/wpf.twain.demo/wpf.twain.demo.Core/bin/Debug/net6.0-windows
+/wpf.twain.demo/wpf.twain.demo/wpf.twain.demo.Core/obj
+/wpf.twain.demo/wpf.twain.demo/wpf.twain.demo/bin/Debug/net6.0-windows
+/wpf.twain.demo/wpf.twain.demo/wpf.twain.demo/obj
+/wpf.twain.demo/wpf.twain.demo/Tests/wpf.twain.demo.Modules.ModuleName.Tests/bin/Debug/net6.0-windows
+/wpf.twain.demo/wpf.twain.demo/Tests/wpf.twain.demo.Modules.ModuleName.Tests/obj
+/wpf.twain.demo/wpf.twain.demo/Services/wpf.twain.demo.Services/bin/Debug/netstandard2.1
+/wpf.twain.demo/wpf.twain.demo/Services/wpf.twain.demo.Services/obj
+/wpf.twain.demo/wpf.twain.demo/Services/wpf.twain.demo.Services.Interfaces/bin/Debug/netstandard2.1
+/wpf.twain.demo/wpf.twain.demo/Services/wpf.twain.demo.Services.Interfaces/obj
+/wpf.twain.demo/wpf.twain.demo/Modules/wpf.twain.demo.Modules.ModuleName/bin/Debug/net6.0-windows
+/wpf.twain.demo/wpf.twain.demo/Modules/wpf.twain.demo.Modules.ModuleName/obj
+/wpf.twain.demo/.vs/wpf.twain.demo
+/.vs
