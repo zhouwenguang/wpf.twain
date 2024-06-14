@@ -1,55 +1,48 @@
 ﻿using NTwain;
 using NTwain.Data;
 using System;
+using System.Collections.Generic;
 using System.IO;
-using System.Reflection;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
 
-namespace wpf.twain.demo.Views
+namespace wpf.twain.demo.Modules.NTwainModule.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for ViewA.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ViewA : UserControl
     {
         private TwainSession _twain;
-        public MainWindow()
+        public ViewA()
         {
             InitializeComponent();
-            //Allow old Device DSM drives
-            PlatformInfo.Current.PreferNewDSM = false;
-
-            var appId = TWIdentity.CreateFromAssembly(DataGroups.Image, Assembly.GetExecutingAssembly());
-            _twain = new TwainSession(appId);
-
-            PlatformInfo.Current.PreferNewDSM = false;
+            _twain = new TwainSession(TWIdentity.CreateFromAssembly(DataGroups.Image, this.GetType().Assembly));
             _twain.TransferReady += _twain_TransferReady;
             _twain.DataTransferred += _twain_DataTransferred;
             _twain.SourceDisabled += _twain_SourceDisabled;
             _twain.TransferError += _twain_TransferError;
             _twain.Open();
         }
+
         private void ScanButton_Click(object sender, RoutedEventArgs e)
         {
             if (_twain.State == 4)
             {
-                //_twain.GetSources();
                 //_twain.SelectSource();
             }
-            else if (_twain.State == 3)
-            {
-                //在此状态下，DSM 已经打开。应用程序可以列出和选择数据源。
-                _twain.GetSources();
-            }
-
         }
 
-        /// <summary>
-        /// 处理传输准备事件
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void _twain_TransferReady(object sender, TransferReadyEventArgs e)
         {
             var src = _twain.CurrentSource;
@@ -63,17 +56,11 @@ namespace wpf.twain.demo.Views
             }
         }
 
-        /// <summary>
-        /// 处理数据传输事件，将图像数据转换为 BitmapImage 并显示在 Image 控件中
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         private void _twain_DataTransferred(object sender, DataTransferredEventArgs e)
         {
             if (e.NativeData != IntPtr.Zero)
             {
-                //e.FileDataPath = e.NativeData;
-                var img = e.GetNativeImageStream();
+                //var img = e.GetNativeImage();
                 //if (img != null)
                 //{
                 //    using (MemoryStream memory = new MemoryStream())
@@ -101,10 +88,12 @@ namespace wpf.twain.demo.Views
             _twain.CurrentSource.Close();
         }
 
-        protected override void OnClosed(EventArgs e)
-        {
-            _twain.Close();
-            base.OnClosed(e);
-        }
+        //protected override onclo
+
+        //protected override void OnClosed(EventArgs e)
+        //{
+        //    _twain.Close();
+        //    base.OnClosed(e);
+        //}
     }
 }

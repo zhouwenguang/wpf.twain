@@ -1,0 +1,31 @@
+﻿TWAIN 状态说明
+以下是各个 TWAIN 状态的说明：
+
+State 1 - Pre-Session:
+这是初始状态。在此状态下，TWAIN 数据源管理器（DSM）尚未打开。
+
+State 2 - Source Manager Loaded:
+在此状态下，DSM 已经加载。应用程序可以调用 DSM_Entry 来与 DSM 进行交互，但还不能打开数据源。
+
+State 3 - Source Manager Open:
+在此状态下，DSM 已经打开。应用程序可以列出和选择数据源。
+
+State 4 - Source Open:
+在此状态下，特定的数据源已经打开。应用程序可以与数据源进行通信并设置能力（Capabilities）。、
+
+State 5 - Source Enabled:
+在此状态下，数据源已经启用，并准备进行图像采集。数据源 UI（如果有）通常在此状态下显示。
+
+State 6 - Transfer Ready:
+在此状态下，数据源准备传输图像数据。
+
+State 7 - Transferring:
+在此状态下，图像数据正在传输。
+
+State 4 - Source Open（返回）：
+图像传输完成后，TWAIN 会话会返回到状态4，数据源仍然打开，可以继续进行其他操作。
+
+
+
+#####################################################
+扫描仪驱动程序多数为32位的 需要再程序集上设置位x86才能显示32位驱动程序

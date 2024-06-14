@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <AssemblyName>ntwain1</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="NTwain" Version="3.7.4" />
+    <PackageReference Include="Prism.Wpf" Version="8.1.97" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\wpf.twain.demo.Core\wpf.twain.demo.Core.csproj" />
+  </ItemGroup>
+</Project>

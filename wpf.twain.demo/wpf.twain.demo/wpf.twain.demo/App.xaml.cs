@@ -2,6 +2,8 @@
 using Prism.Modularity;
 using System.Windows;
 using wpf.twain.demo.Modules.ModuleName;
+using wpf.twain.demo.Modules.NTwainModule;
+using wpf.twain.demo.Modules.WAIModule;
 using wpf.twain.demo.Services;
 using wpf.twain.demo.Services.Interfaces;
 using wpf.twain.demo.Views;
@@ -25,7 +27,9 @@ namespace wpf.twain.demo
 
         protected override void ConfigureModuleCatalog(IModuleCatalog moduleCatalog)
         {
-            moduleCatalog.AddModule<ModuleNameModule>();
+            //moduleCatalog.AddModule<ModuleNameModule>();
+            //moduleCatalog.AddModule<NTwainModuleModule>();
+            //moduleCatalog.AddModule<WAIModuleModule>();
         }
     }
 }

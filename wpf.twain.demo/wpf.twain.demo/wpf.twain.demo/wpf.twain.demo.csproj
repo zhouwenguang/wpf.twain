@@ -1,16 +1,36 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net6.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows7.0</TargetFramework>
     <UseWPF>true</UseWPF>
+    <Authors>Scanner</Authors>
+    <Company />
+    <Product>Scanner</Product>
+    <Copyright>Copyright ©  2024</Copyright>
+    <PlatformTarget>x86</PlatformTarget>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Prism.DryIoc" Version="8.1.97" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Modules\wpf.twain.demo.Modules.NTwainModule\wpf.twain.demo.Modules.NTwainModule.csproj" />
+    <ProjectReference Include="..\Modules\wpf.twain.demo.Modules.WAIModule\wpf.twain.demo.Modules.WAIModule.csproj" />
     <ProjectReference Include="..\wpf.twain.demo.Core\wpf.twain.demo.Core.csproj" />
     <ProjectReference Include="..\Modules\wpf.twain.demo.Modules.ModuleName\wpf.twain.demo.Modules.ModuleName.csproj" />
     <ProjectReference Include="..\Services\wpf.twain.demo.Services.Interfaces\wpf.twain.demo.Services.Interfaces.csproj" />
     <ProjectReference Include="..\Services\wpf.twain.demo.Services\wpf.twain.demo.Services.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
 </Project>

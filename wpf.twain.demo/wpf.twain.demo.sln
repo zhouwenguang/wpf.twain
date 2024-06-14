@@ -21,6 +21,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "wpf.twain.demo", "wpf.twain
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "wpf.twain.demo.Core", "wpf.twain.demo\wpf.twain.demo.Core\wpf.twain.demo.Core.csproj", "{013EF4EC-0BC6-4F97-AF97-C05EBBB895DF}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "wpf.twain.demo.Modules.NTwainModule", "wpf.twain.demo\Modules\wpf.twain.demo.Modules.NTwainModule\wpf.twain.demo.Modules.NTwainModule.csproj", "{BD132BD7-DBA9-41BB-9D40-79626FBAE3E6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "wpf.twain.demo.Modules.WAIModule", "wpf.twain.demo\Modules\wpf.twain.demo.Modules.WAIModule\wpf.twain.demo.Modules.WAIModule.csproj", "{89CA99F5-C9CD-4BCB-A6C0-37FD023709A0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +55,14 @@ Global
 		{013EF4EC-0BC6-4F97-AF97-C05EBBB895DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{013EF4EC-0BC6-4F97-AF97-C05EBBB895DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{013EF4EC-0BC6-4F97-AF97-C05EBBB895DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD132BD7-DBA9-41BB-9D40-79626FBAE3E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD132BD7-DBA9-41BB-9D40-79626FBAE3E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD132BD7-DBA9-41BB-9D40-79626FBAE3E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD132BD7-DBA9-41BB-9D40-79626FBAE3E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89CA99F5-C9CD-4BCB-A6C0-37FD023709A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89CA99F5-C9CD-4BCB-A6C0-37FD023709A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89CA99F5-C9CD-4BCB-A6C0-37FD023709A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89CA99F5-C9CD-4BCB-A6C0-37FD023709A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +72,8 @@ Global
 		{3C9BFC14-AA3E-4E7E-9BCE-C416BB4DB115} = {907B1C17-0F57-4F8E-B1BE-90CEE8CB1E2E}
 		{93A5CA03-D86D-4EF8-8A9F-ABB5F6B10AD2} = {71D1DA84-7D2A-4131-A47E-F69C7B78CE52}
 		{8DDBE505-3697-4FAE-8879-46741677F17B} = {71D1DA84-7D2A-4131-A47E-F69C7B78CE52}
+		{BD132BD7-DBA9-41BB-9D40-79626FBAE3E6} = {907B1C17-0F57-4F8E-B1BE-90CEE8CB1E2E}
+		{89CA99F5-C9CD-4BCB-A6C0-37FD023709A0} = {907B1C17-0F57-4F8E-B1BE-90CEE8CB1E2E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {52C1C13E-4EEF-4B9D-87C1-6D5E634E93D5}

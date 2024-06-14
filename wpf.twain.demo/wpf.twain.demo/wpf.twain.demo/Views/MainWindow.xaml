@@ -7,5 +7,8 @@
         Title="{Binding Title}" Height="350" Width="525" WindowStartupLocation="CenterScreen">
     <Grid>
         <ContentControl prism:RegionManager.RegionName="{x:Static core:RegionNames.ContentRegion}" />
+
+        <!--<Button Name="ScanButton" Content="Scan" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="ScanButton_Click"/>
+        <Image Name="ScannedImage" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,50,0,0" Width="500" Height="250"/>-->
     </Grid>
 </Window>
